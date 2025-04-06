@@ -7,7 +7,8 @@ on:
     types:
     - completed
 
-permissions: {}
+permissions:
+  contents: read
 
 jobs:
   add-label:
@@ -17,6 +18,12 @@ jobs:
       PR_NUMBER: ${{ join(github.event.workflow_run.pull_requests.*.number, '') }}
 
     steps:
+    - name: "Checkout"
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      with:
+        fetch-depth: 0
+        persist-credentials: false
+
     - name: "Generate GitHub App Token"
       id: github-app-token
       uses: actions/create-github-app-token@3ff1caaa28b64c9cc276ce0a02e2ff584f3900c5 # v2.0.2
