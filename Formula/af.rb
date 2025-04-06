@@ -1,12 +1,9 @@
 class Af < Formula
   desc "Afrael's CLI tool"
   homepage "https://github.com/bartsmykla/af"
-  url "https://github.com/bartsmykla/af.git",
-      tag:      "v0.1.12",
-      revision: "90186ebd2d6cc139ab6ba0d93f0478605dbec7d6"
+  url "https://github.com/bartsmykla/af/archive/refs/tags/v0.1.12.tar.gz"
+  sha256 "ee58fbeffcaa150e2ba5cf0e4cb3373658b506142ffd9e44b43006cb408852e9"
   license "MIT"
-  head "https://github.com/bartsmykla/af.git",
-       branch: "master"
 
   bottle do
     root_url "https://ghcr.io/v2/bartsmykla/af"
