@@ -1,13 +1,6 @@
 name: "brew test-bot"
 
 on:
-  push:
-    branches:
-    - master
-    paths-ignore:
-    - .github/**/*
-    - .gitignore
-
   pull_request:
     paths-ignore:
     - .github/**/*
@@ -16,6 +9,8 @@ on:
 jobs:
   test-bot:
     runs-on: ${{ matrix.os }}
+
+    if: ${{ !github.event.pull_request.draft }}
 
     strategy:
       fail-fast: false
