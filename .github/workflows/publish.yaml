@@ -29,7 +29,12 @@ jobs:
         HOMEBREW_GITHUB_PACKAGES_TOKEN: ${{ github.token }}
         HOMEBREW_GITHUB_PACKAGES_USER: ${{ github.repository_owner }}
         PULL_REQUEST: ${{ github.event.pull_request.number }}
-      run: brew pr-pull --debug --tap="$GITHUB_REPOSITORY" "$PULL_REQUEST"
+      run: |
+        brew pr-pull \
+          --debug \
+          --tap="$GITHUB_REPOSITORY" \
+          --workflows="tests.yaml" \
+          "$PULL_REQUEST"
 
     - name: "Push commits"
       uses: Homebrew/actions/git-try-push@8621e5532e069770650da7e17f5acf72072497c1 # master
