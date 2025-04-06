@@ -1,0 +1,17 @@
+name: "add pr-pull label"
+
+on:
+  check_suite:
+    types:
+    - completed
+
+jobs:
+  add-label:
+    runs-on: ubuntu-24.04
+
+    steps:
+    - name: "Print GitHub context"
+      run: |
+        cat <<EOF
+        ${{ toJSON(github) }}
+        EOF
