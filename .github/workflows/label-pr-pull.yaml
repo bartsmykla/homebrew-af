@@ -1,7 +1,12 @@
 name: "add pr-pull label"
 
 on:
-  check_suite:
+  workflow_run:
+    workflows:
+    - foo
+    types:
+    - completed
+  check_run:
     types:
     - completed
 
@@ -15,3 +20,15 @@ jobs:
         cat <<EOF
         ${{ toJSON(github) }}
         EOF
+
+    - name: "Generate GitHub App Token"
+      id: github-app-token
+      uses: actions/create-github-app-token@3ff1caaa28b64c9cc276ce0a02e2ff584f3900c5 # v2.0.2
+      with:
+        app-id: ${{ secrets.APP_ID }}
+        private-key: ${{ secrets.APP_PRIVATE_KEY }}
+#
+#    - uses: actions/labeler@v5
+#      with:
+#        repo-token: ${{ steps.github-app-token.outputs.token }}
+#        pr-number:

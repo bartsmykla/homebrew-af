@@ -1,0 +1,19 @@
+name: "foo"
+
+on:
+  pull_request: {}
+
+jobs:
+  foo:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+        - ubuntu-24.04
+        - macos-13
+        - macos-15
+
+    steps:
+    - run: echo foo ${{ matrix.os }}
