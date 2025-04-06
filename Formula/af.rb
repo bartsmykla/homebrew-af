@@ -1,5 +1,5 @@
 class Af < Formula
-  desc "Afrael's CLI tool"
+  desc "Afrael's CLI tool - foo"
   homepage "https://github.com/bartsmykla/af"
   url "https://github.com/bartsmykla/af.git",
       tag:      "v0.1.12",

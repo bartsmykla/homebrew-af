@@ -8,10 +8,10 @@ on:
     - .github/**/*
     - .gitignore
 
-  pull_request:
-    paths-ignore:
-    - .github/**/*
-    - .gitignore
+#  pull_request:
+#    paths-ignore:
+#    - .github/**/*
+#    - .gitignore
 
 jobs:
   test-bot:

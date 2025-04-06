@@ -1,7 +1,9 @@
 name: "add pr-pull label"
 
 on:
-  check_suite:
+  workflow_run:
+    workflows:
+    - foo
     types:
     - completed
 
