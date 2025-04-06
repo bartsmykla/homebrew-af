@@ -6,20 +6,13 @@ on:
     - foo
     types:
     - completed
-  check_run:
-    types:
-    - completed
 
 jobs:
   add-label:
     runs-on: ubuntu-24.04
 
     steps:
-    - name: "Print GitHub context"
-      run: |
-        cat <<EOF
-        ${{ toJSON(github) }}
-        EOF
+    - run: echo ${{ join(github.event.workflow_run.pull_requests.*.name, '') }}
 
     - name: "Generate GitHub App Token"
       id: github-app-token
