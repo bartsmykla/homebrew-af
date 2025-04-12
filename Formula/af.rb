@@ -20,6 +20,9 @@ class Af < Formula
     system "cargo", "install", *std_cargo_args
 
     generate_completions_from_executable(bin / "af", "completions")
+
+    system "cargo", "genman"
+    man1.install Dir["docs/man/man1/*.1"]
   end
 
   test do
