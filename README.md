@@ -1,4 +1,4 @@
-# Bartsmykla Af
+# bartsmykla af
 
 ## How do I install these formulae?
 
