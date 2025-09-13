@@ -7,9 +7,9 @@ class Af < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/bartsmykla/af"
-    sha256 cellar: :any,                 arm64_sequoia: "16427530756c0aafd5ab2614f64824e1c963697b98aab3db8711c5af3b01522c"
-    sha256 cellar: :any,                 ventura:       "7ed2b76093a24551be29ed3c6f9873e1466b8c6f2de69c9a4d26aa010cca50d5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dfa0816548f06cf300ee3b2b2f271ae28b21f073bdda9b7a54d145f490ed1389"
+    sha256 cellar: :any,                 arm64_sequoia: "7a939ff94c33dcb6298ceddd5304fc204ce42a1a6e1b4df9913c1d6875c2c508"
+    sha256 cellar: :any,                 ventura:       "b4a5cf88f90ca72f81e89073192ef62f1231734e8bcf5e98b2a1f941ff878434"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "61eb1fc60c96c3876be809ad770b9be7990a5943b8210dfac2c0f4476ebcdd41"
   end
 
   depends_on "rust" => :build
