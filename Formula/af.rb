@@ -1,8 +1,8 @@
 class Af < Formula
   desc "Afrael's CLI tool"
   homepage "https://github.com/bartsmykla/af"
-  url "https://github.com/bartsmykla/af/archive/refs/tags/v0.7.44.tar.gz"
-  sha256 "8bed5003025bcd2d22e8269776233ad6865577dab9c6588b9c85388013e9bb96"
+  url "https://github.com/bartsmykla/af/archive/refs/tags/v0.7.46.tar.gz"
+  sha256 "317fe4a6832778c4a0e75e781c2d59175bd4cb4074ec0cb4e4043d6c9b5c38cf"
   license "MIT"
 
   bottle do
