@@ -16,12 +16,12 @@ jobs:
       matrix:
         os:
         - ubuntu-24.04
-        - macos-13
         - macos-15
 
     steps:
     - name: "Set up Homebrew"
       id: set-up-homebrew
+      # Cannot pin by digest: Homebrew/actions uses branch-based versioning
       uses: Homebrew/actions/setup-homebrew@3735452a47ff25baa52a581a6156cfe4efa420c8 # master
 
     - name: "Cache Homebrew Bundler RubyGems"
@@ -38,7 +38,7 @@ jobs:
     - run: brew test-bot --only-tap-syntax
 
     - if: github.event_name == 'pull_request'
-      run: brew test-bot --only-formulae --root-url='https://ghcr.io/v2/bartsmykla/af'
+      run: brew test-bot --only-formulae --root-url='https://ghcr.io/v2/smykla-labs/af'
 
     - name: "Upload bottles as artifact"
       if: always() && github.event_name == 'pull_request'
