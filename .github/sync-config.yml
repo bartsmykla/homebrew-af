@@ -1,0 +1,8 @@
+sync:
+  # Skip file synchronization for this repository
+  files:
+    skip: true
+
+  # Enable label synchronization with removal of unlisted labels
+  labels:
+    allow_removal: true
