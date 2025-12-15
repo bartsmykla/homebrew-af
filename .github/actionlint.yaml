@@ -1,0 +1,5 @@
+---
+config-variables:
+  - BREW_COMMIT_APP_ID
+  - SMYKLOT_APP_ID
+  - SMYKLOT_CONFIG
