@@ -56,7 +56,7 @@ The repository uses Homebrew's `brew test-bot` for automated testing:
 
 When a PR is labeled with `pr-pull`:
 1. `brew pr-pull` merges the PR and publishes bottles to GHCR
-2. Commits are pushed to `master`
+2. Commits are pushed to `main`
 3. Source branch is deleted (if not from fork)
 
 ## Updating the Formula
@@ -77,4 +77,4 @@ When updating to a new version of `af`:
 
 - **Renovate**: Configured for auto-merging minor/patch updates
 - **Sync config**: File sync disabled, label sync enabled with removal
-- **Branch**: `master` (not `main`)
+- **Branch**: `main`
