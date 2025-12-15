@@ -5,6 +5,9 @@ on:
     paths:
     - Formula/**/*
 
+permissions:
+  contents: read
+
 jobs:
   test-bot:
     runs-on: ${{ matrix.os }}
