@@ -33,7 +33,7 @@ jobs:
         brew pr-pull \
           --debug \
           --tap="$GITHUB_REPOSITORY" \
-          --workflows="tests.yaml" \
+          --workflows="tests.yml" \
           "$PULL_REQUEST"
 
     - name: "Push commits"
