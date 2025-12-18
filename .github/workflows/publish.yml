@@ -34,7 +34,7 @@ jobs:
     - name: "Pull bottles"
       env:
         HOMEBREW_GITHUB_API_TOKEN: ${{ steps.github-app-token.outputs.token }}
-        HOMEBREW_GITHUB_PACKAGES_TOKEN: ${{ steps.github-app-token.outputs.token }}
+        HOMEBREW_GITHUB_PACKAGES_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         HOMEBREW_GITHUB_PACKAGES_USER: ${{ github.repository_owner }}
         PULL_REQUEST: ${{ github.event.pull_request.number }}
       run: |
